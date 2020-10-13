@@ -14,4 +14,10 @@ const QuoteCard = ({ image, name, isConnect }) => (
     </div>
   )
 
+  QuoteCard.propTypes = {
+    name : PropTypes.string.isRequired,
+    image : PropTypes.string.isRequired,
+    isConnect : PropTypes.bool.isRequired,
+
+  };
 export default QuoteCard;

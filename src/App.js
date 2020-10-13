@@ -1,6 +1,5 @@
 import React from 'react';
 import QuoteCard from './components/QuoteCard.js';
-import Avatar from './components/QuoteCard.js'
 import './components/style.css'
 
 const myCard = {
