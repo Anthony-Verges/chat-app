@@ -1,6 +1,7 @@
 import React from 'react';
 import QuoteCard from './components/QuoteCard.js';
 import './components/style.css'
+import ContactList from './components/ContactList';
 
 const myCard = {
   image : "https://randomuser.me/api/portraits/men/88.jpg",
@@ -21,12 +22,16 @@ const vicSalomonCard = {
 
 
 
+
+
 function App() {
   return (
     <div className="App">
       <QuoteCard {...myCard}/>
       <QuoteCard {...jLOCard}/>
       <QuoteCard {...vicSalomonCard}/>
+
+      <ContactList />
       
     </div>
   );
