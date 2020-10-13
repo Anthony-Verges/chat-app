@@ -1,5 +1,6 @@
 import React from 'react';
-import Avatar from './components/Contact.js'
+import QuoteCard from './components/QuoteCard.js';
+import Avatar from './components/QuoteCard.js'
 import './components/style.css'
 
 const myCard = {
@@ -24,9 +25,9 @@ const vicSalomonCard = {
 function App() {
   return (
     <div className="App">
-      <Avatar {...myCard}/>
-      <Avatar {...jLOCard}/>
-      <Avatar {...vicSalomonCard}/>
+      <QuoteCard {...myCard}/>
+      <QuoteCard {...jLOCard}/>
+      <QuoteCard {...vicSalomonCard}/>
       
     </div>
   );

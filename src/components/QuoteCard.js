@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Avatar = ({ image, name, isConnect }) => (
+const QuoteCard = ({ image, name, isConnect }) => (
     <div className="Contact">
       <img className="avatar" src={image} alt="Avatar" />
       <div>
@@ -13,4 +14,4 @@ const Avatar = ({ image, name, isConnect }) => (
     </div>
   )
 
-export default Avatar;
+export default QuoteCard;
