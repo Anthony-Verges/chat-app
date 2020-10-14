@@ -1,18 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const QuoteCard = ({ image, name, isConnect }) => (
-    <div className="Contact">
-      <img className="avatar" src={image} alt="Avatar" />
+
+class QuoteCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      online : this.props.isConnect,
+    };
+  }
+  render() {
+    return (
+      <div className="Contact">
+      <img className="avatar" src={this.props.image} alt="Avatar" />
       <div>
-        <h4 className="name">{name}</h4>
+        <h4 className="name">{this.props.name}</h4>
         <div className="status">
-          <span className={isConnect ? "status-online" : "status-offline" }></span>
-          <p className="status-text">{isConnect ? "onLine" : "offLine"}</p>
+          <span className={this.state.online ? "status-online" : "status-offline" }
+                onClick = {event => {
+                  const newStatus = !this.state.online;
+                  this.setState({ online: newStatus})
+                }}
+          >
+          </span>
+          <p className="status-text" 
+             onClick = {event => {
+               const newStatusText = !this.state.online;
+               this.setState({ online: newStatusText})
+             }}
+          >{this.state.online ? "onLine" : "offLine"}
+          </p>
         </div>
       </div>
     </div>
-  )
+    );
+  }
+}
+
 
   QuoteCard.propTypes = {
     name : PropTypes.string.isRequired,
